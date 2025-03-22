@@ -1,0 +1,252 @@
+html {
+    --c1: #17526b;
+    --c2: #2a6a84;
+    --c3: #3dc1dc;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: .5fr .3fr .2fr;
+    grid-template-rows: 1.1fr 0.9fr;
+
+    background: var(--c3)
+}
+
+#app > .sx {
+    background: var(--c1);
+    border-radius: 0 0 20px 0;
+
+    grid-row: span 2;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 100px;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#titleBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    color: #fff;
+    font-family: "copper";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 9vh;
+}
+
+#imgUplBox {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+    
+    justify-self: center;
+    align-items: center;
+
+    border: var(--c3) 3px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#imgCnvBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    display: none;
+}
+
+#imgCnv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#canc {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: 5px;
+
+    background: var(--c3);
+    border-radius: 2px;
+
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "copper";
+
+    z-index: 3;
+    cursor: pointer;
+}
+
+#canc:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: var(--c3);
+}
+
+#uplW {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+#logo {
+    position: relative;
+    width: 80%;
+    height: 100%;
+
+    justify-self: center;
+
+    background-image: url(./img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#uplTxt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-family: "copper";
+    font-size: 4.5vh;
+
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+#uplTxt:hover {
+    transform: scale(1.1);
+    color: var(--c3)
+}
+
+#outBox, #mapLabel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+    font-family: "copper";
+    font-size: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapBox {
+    background: var(--c2);
+
+    border-radius: 0 0 20px 20px;
+
+    grid-column: span 2;
+
+    padding: 7% 7% 0 7%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20%;
+}
+
+#mapCnv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#app > .mid {
+    position: relative;
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
+    grid-row: 2;
+    grid-column: 2;
+
+    background-image: url(./img/grafico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #80cdf0;
+
+    border: var(--c1) 5px solid;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    margin: 40px 20px 40px 40px;
+}
+
+#app > .dx {
+    position: relative;
+    grid-row: 2;
+    grid-column: 3;
+
+    max-width: calc(100% - 20px);
+    max-height:  calc(100% - 20px);
+
+    background-image: url(./img/CLlungo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    margin: 20px;
+}
+
+#app > .dx:after {
+    content: "By: ";
+    position: absolute;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    top: 20%;
+
+    color: #fff;
+    font-family: "copper";
+    font-size: 3vh;
+}
+
+@font-face {
+    font-family: "copper";
+    src: url("./fonts/Copperplate.otf") format('opentype');
+}
